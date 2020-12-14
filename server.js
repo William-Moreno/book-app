@@ -15,6 +15,13 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
+app.get('/', getHome);
+
+
+
+function getHome(req, res){
+  res.render('pages/index.ejs');
+}
 
 
 
