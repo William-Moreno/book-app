@@ -17,12 +17,17 @@ app.set('view engine', 'ejs');
 
 app.get('/', getHome);
 
+app.get('/hello', getHello);
+
 
 
 function getHome(req, res){
   res.render('pages/index.ejs');
 }
 
+function getHello(req, res){
+  res.render('pages/index.ejs');
+}
 
 
 // error handling and start server
