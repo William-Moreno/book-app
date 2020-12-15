@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/layout.css">
-    <link rel="stylesheet" href="../styles/modules.css">
 
-    <title>Search</title>
-</head>
-<body>
-    <header>
-        <h1>Best Books!</h1>
-        <nav>Test</nav>
-    </header>
-    <main>
-        <form action="/search" method="POST">
-        <fieldset>
-            <h2>Search by Title or Author</h2>
-            <!-- <label for="query">Enter a Title or Author</label> -->
-            <input type="text" name="query" placeholder="Enter a Title or Author">
-            <br>
-            <label for="searchtype">Title</label>
-            <input type="radio" name="searchtype" value="title">
-            <br>
-            <label for="searchtype">Author</label>
-            <input type="radio" name="searchtype" value="author">
-            <br>
-            <input type="submit" value="Search the Google Books API">
-        </fieldset>
-        </form>
-    </main>
-    <footer></footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/layout.css">
+        <link rel="stylesheet" href="../styles/modules.css">
+
+        <title>Search</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Best Books!</h1>
+            <nav>Test</nav>
+        </header>
+        <main>
+            <form action="/search" method="POST">
+                <fieldset>
+                    <h2>Search by Title or Author</h2>
+                    <!-- <label for="query">Enter a Title or Author</label> -->
+                    <input type="text" name="query" placeholder="Enter a Title or Author">
+                    <br>
+                    <label for="searchtype">Title</label>
+                    <input type="radio" name="searchtype" value="title">
+                    <br>
+                    <label for="searchtype">Author</label>
+                    <input type="radio" name="searchtype" value="author">
+                    <br>
+                    <input type="submit" value="Search the Google Books API">
+                </fieldset>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+
 </html>
