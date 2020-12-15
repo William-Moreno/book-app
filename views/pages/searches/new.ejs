@@ -16,17 +16,17 @@
         <nav>Test</nav>
     </header>
     <main>
-        <form action="/searches/new">
+        <form action="/search" method="POST">
         <fieldset>
             <h2>Search by Title or Author</h2>
             <!-- <label for="query">Enter a Title or Author</label> -->
             <input type="text" name="query" placeholder="Enter a Title or Author">
             <br>
-            <label for="search-type">Title</label>
-            <input type="radio" name="search-type" value="title">
+            <label for="searchtype">Title</label>
+            <input type="radio" name="searchtype" value="title">
             <br>
-            <label for="search-type">Author</label>
-            <input type="radio" name="search-type" value="author">
+            <label for="searchtype">Author</label>
+            <input type="radio" name="searchtype" value="author">
             <br>
             <input type="submit" value="Search the Google Books API">
         </fieldset>

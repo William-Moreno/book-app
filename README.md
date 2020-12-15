@@ -21,24 +21,22 @@ The user must create a repository and include neccessary config files, create a 
 ## Change Log
 
 Number and name of feature: lab-11 feature 1
-
 Estimate of time needed to complete: 1 hour 30 minutes
-
 Start time: 1:30 PM
-
 Finish time: 3:00 PM
-
 Actual time needed to complete: 1 hour 30 minutes
 
 
 Number and name of feature: lab-11 feature 2
-
 Estimate of time needed to complete: 1 hour 30 minutes
-
 Start time: 3:40 PM
-
 Finish time: 4:15 PM
+Actual time needed to complete: 35 minutes
 
+Number and name of feature: lab-11 feature 3
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time: 4:25 PM
+Finish time: 4:15 PM
 Actual time needed to complete: 35 minutes
 
 12/14/2020 1:15 PM: started lab-11
