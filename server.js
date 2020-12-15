@@ -35,29 +35,40 @@ function getSearch(req, res){
   res.render('pages/searches/new.ejs');
 }
 
+function throwError(req, res){
+  res.status(500).render('pages/error.ejs');
+}
+
 function getBooks(req, res){
   let searchString = req.body.query;
-
-  console.log(req.body);
+  let searchType = req.body.searchtype;
   let url=`https://www.googleapis.com/books/v1/volumes?q=${searchString}`;
-  superagent.get(url).then(returnData => {
-    const bookData = (returnData.body.items);
-    const bookArray = bookData.map(function(book){
-      return new BookData(book);
-    });
-    for(let i = 0 ; i < bookArray.length ; i++){
-      let regex = /http:/gi;
-      bookArray[i].image_url = bookArray[i].image_url.replace(regex, 'https:');
-    }
-    res.render('pages/searches/show.ejs', {
-      booklist: bookArray
-    });
-  }).catch(() => res.status(500).send('Sorry, something went wrong.'));
+  superagent.get(url).timeout({
+    response: 5000,
+    deadline: 30000,
+  })
+    .then(returnData => {
+      const bookData = (returnData.body.items);
+      const bookArray = bookData.map(function(book){
+        return new BookData(book);
+      });
+      for(let i = 0 ; i < bookArray.length ; i++){
+        let regex = /http:/gi;
+        bookArray[i].image_url = bookArray[i].image_url.replace(regex, 'https:');
+      }
+      res.render('pages/searches/show.ejs', {
+        booklist: bookArray
+      });
+    }, err => {
+      if (err.timeout) {
+        res.status(408).send('Request timed out.');
+      }
+    }).catch(() => throwError);
 }
 
 function BookData(book){
   this.title = book.volumeInfo.title;
-  this.author = book.volumeInfo.authors || 'Unknown';
+  this.author = book.volumeInfo.authors || 'Unlisted';
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
 }
