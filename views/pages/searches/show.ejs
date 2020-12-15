@@ -4,29 +4,33 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/modules.css">
     <title>Search Results</title>
   </head>
 
   <body>
     <header>
-      <h1>Best Books!</h1>
       <nav>
         X
       </nav>
+      <h1>Best Books!</h1>
     </header>
     <main>
-      <h2>Search by Title or Author</h2>
+      <h2>Search Results</h2>
       <section>
         <% for( let i=0 ; i < booklist.length ; i ++) { %>
           <div>
-            <img src="<%= booklist[i].image_url %>" alt="">
-            <h3>
+            <img src="<%= booklist[i].image_url %>" alt="" class="book-image">
+            <h3 class="book-title">
               <%= booklist[i].title %>
             </h3>
-            <p><em>
+            <p class="book-author"><em>
                 <%= booklist[i].author %>
               </em></p>
-            <p>
+            <p class="description">
               <%= booklist[i].description %>
             </p>
           </div>
@@ -34,7 +38,7 @@
       </section>
     </main>
     <footer>
-
+      <p>2020</p>
     </footer>
   </body>
 

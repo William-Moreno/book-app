@@ -14,25 +14,29 @@
 
     <body>
         <header>
+            <nav>X</nav>
             <h1>Best Books!</h1>
-            <nav>Test</nav>
         </header>
         <main>
-            <form action="/search" method="POST">
-                <fieldset>
-                    <h2>Search by Title or Author</h2>
-                    <!-- <label for="query">Enter a Title or Author</label> -->
-                    <input type="text" name="query" placeholder="Enter a Title or Author">
-                    <br>
-                    <label for="searchtype">Title</label>
-                    <input type="radio" name="searchtype" value="title">
-                    <br>
-                    <label for="searchtype">Author</label>
-                    <input type="radio" name="searchtype" value="author">
-                    <br>
-                    <input type="submit" value="Search the Google Books API">
-                </fieldset>
-            </form>
+            <h2>Search by Title or Author</h2>
+            <section>
+                <form action="/search" method="POST">
+                    <fieldset>
+                        <!-- <label for="query">Enter a Title or Author</label> -->
+                        <input class="entry" type="text" name="query" placeholder="Enter a Title or Author">
+                        <br>
+                        <label class="selector" for="searchtype">Title<input class="rad-btn" type="radio"
+                                name="searchtype" value="title"></label>
+
+                        <br>
+                        <label class="selector" for="searchtype">Author<input class="rad-btn" type="radio"
+                                name="searchtype" value="author"></label>
+
+                        <br>
+                        <input class="sub-btn" type="submit" value="Search the Google Books API">
+                    </fieldset>
+                </form>
+            </section>
         </main>
         <footer></footer>
     </body>
