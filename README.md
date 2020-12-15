@@ -34,9 +34,34 @@ Finish time: 4:15 PM
 Actual time needed to complete: 35 minutes
 
 Number and name of feature: lab-11 feature 3
-Estimate of time needed to complete: 1 hour 30 minutes
+Estimate of time needed to complete: 2 hours
 Start time: 4:25 PM
-Finish time: 4:15 PM
+Finish time: 8:30 PM
+Actual time needed to complete: 3 hours 55 minutes
+
+Number and name of feature: lab-11 feature 4
+Estimate of time needed to complete: 30 minutes
+Start time: 5:30 PM
+Finish time: 6:00 PM
+Actual time needed to complete: 30 minutes
+
+Number and name of feature: lab-11 feature 5
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time: 8:45 PM
+Finish time: 10:00 PM
+Actual time needed to complete: 1 hour 15 minutes
+
+Number and name of feature: lab-11 feature 6
+Estimate of time needed to complete: 30 minutes
+Start time: 4:25 PM
+Finish time: 5:00 PM
+Actual time needed to complete: 35 minutes
+
+
+Number and name of feature: lab-12 feature 1
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time: 1:50 PM
+Finish time: 5:00 PM
 Actual time needed to complete: 35 minutes
 
 12/14/2020 1:15 PM: started lab-11
@@ -47,7 +72,9 @@ Actual time needed to complete: 35 minutes
 12/14/2020 3:00 PM: made pull request to master and confirmed functionality on deployed site.
 12/14/2020 4:00PM: created new.ejs file and created a search field.
 12/14/2020 4:15PM: made pull request to master and confirmed functionality on deployed site.
-
+12/14/2020 8:30 PM: Created book constructor and added route handler for a POST request to /searches
+12/14/2020 10:00 PM: Created CSS in public folder, used SMACCS principles, and performed CSS styling
+12/14/2020
 
 ## Credits and Collaborations
 Brai Frauen
