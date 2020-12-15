@@ -37,9 +37,9 @@ Estimate of time needed to complete: 1 hour 30 minutes
 
 Start time: 3:40 PM
 
-Finish time: :00 PM
+Finish time: 4:15 PM
 
-Actual time needed to complete:  hour  minutes
+Actual time needed to complete: 35 minutes
 
 12/14/2020 1:15 PM: started lab-11
 12/14/2020 1:45 PM: create a basic server.js file
@@ -47,6 +47,8 @@ Actual time needed to complete:  hour  minutes
 12/14/2020 2:30 PM: created basic html scaffold in out index.ejs file which contains several elements viewable in our browser
 12/14/2020 2:45 PM: created temporary route to rener our index.ejs file
 12/14/2020 3:00 PM: made pull request to master and confirmed functionality on deployed site.
+12/14/2020 4:00PM: created new.ejs file and created a search field.
+12/14/2020 4:15PM: made pull request to master and confirmed functionality on deployed site.
 
 
 ## Credits and Collaborations

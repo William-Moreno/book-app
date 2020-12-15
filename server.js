@@ -15,9 +15,10 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/', getHome);
 
+app.get('/', getHome);
 app.get('/hello', getHello);
+app.get('/searches/new', getSearch);
 
 
 
@@ -27,6 +28,10 @@ function getHome(req, res){
 
 function getHello(req, res){
   res.render('pages/index.ejs');
+}
+
+function getSearch(req, res){
+  res.render('pages/searches/new.ejs');
 }
 
 

@@ -12,7 +12,26 @@
 </head>
 <body>
     <header>
-        
+        <h1>Best Books!</h1>
+        <nav>Test</nav>
     </header>
+    <main>
+        <form action="/searches/new">
+        <fieldset>
+            <h2>Search by Title or Author</h2>
+            <!-- <label for="query">Enter a Title or Author</label> -->
+            <input type="text" name="query" placeholder="Enter a Title or Author">
+            <br>
+            <label for="search-type">Title</label>
+            <input type="radio" name="search-type" value="title">
+            <br>
+            <label for="search-type">Author</label>
+            <input type="radio" name="search-type" value="author">
+            <br>
+            <input type="submit" value="Search the Google Books API">
+        </fieldset>
+        </form>
+    </main>
+    <footer></footer>
 </body>
 </html>
