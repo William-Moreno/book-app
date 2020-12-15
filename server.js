@@ -40,14 +40,14 @@ function getBooks(req, res){
   console.log(req.query);
   let searchString = req.query.query;
   let searchType = req.query.searchtype;
-  
+
   let url=`https://www.googleapis.com/books/v1/volumes?q=${searchString}`;
   superagent.get(url).then(returnData => {
     const bookData = (returnData.body.items);
-    const bookInstance = bookData.map(function(book){
+    const bookArray = bookData.map(function(book){
       return new BookData(book);
-  });
-});
+    });
+  }).catch(() => res.status(500).send('Sorry, something went wrong.'));
 }
 
 function BookData(book){

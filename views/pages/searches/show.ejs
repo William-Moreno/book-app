@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Best Books!</h1>
+      <nav>
+        X
+      </nav>
+    </header>
+    <main>
+      <h2>Search by Title or Author</h2>
+      <section>
+        <% for( let i=0 ; i < booklist.length ; i ++) { %>
+          <div>
+            <img src="<%= booklist[i].image_url %>" alt="">
+            <h3>
+              <%= booklist[i].title %>
+            </h3>
+            <p><em>
+                <%= booklist[i].author %>
+              </em></p>
+            <p>
+              <%= booklist[i].description %>
+            </p>
+          </div>
+          <% } %>
+      </section>
+    </main>
+
+  </body>
+
+</html>
