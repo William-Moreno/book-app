@@ -37,7 +37,6 @@ function getSearch(req, res){
 }
 
 function getBooks(req, res){
-  console.log(req.query);
   let searchString = req.query.query;
   let searchType = req.query.searchtype;
 
@@ -47,13 +46,20 @@ function getBooks(req, res){
     const bookArray = bookData.map(function(book){
       return new BookData(book);
     });
+    for(let i = 0 ; i < bookArray.length ; i++){
+      let regex = /http:/gi;
+      bookArray[i].image_url = bookArray[i].image_url.replace(regex, 'https:');
+    }
+    res.render('pages/searches/show.ejs', {
+      booklist: bookArray
+    });
   }).catch(() => res.status(500).send('Sorry, something went wrong.'));
 }
 
 function BookData(book){
   this.title = book.volumeInfo.title;
-  this.author = book.volumeInfo.author;
-  this.description = book.volumeInfo.description;
+  this.author = book.volumeInfo.authors || 'Unknown';
+  this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
 }
 
