@@ -21,20 +21,20 @@
     <main>
       <h2>Search Results</h2>
       <section>
-        <% for( let i=0 ; i < booklist.length ; i ++) { %>
+        <% booklist.forEach((book)=> { %>
           <div>
-            <img src="<%= booklist[i].image_url %>" alt="" class="book-image">
+            <img src="<%= book.image_url %>" alt="" class="book-image">
             <h3 class="book-title">
-              <%= booklist[i].title %>
+              <%= book.title %>
             </h3>
             <p class="book-author"><em>
-                <%= booklist[i].author %>
+                <%= book.author %>
               </em></p>
             <p class="description">
-              <%= booklist[i].description %>
+              <%= book.description %>
             </p>
           </div>
-          <% } %>
+          <% }) %>
       </section>
     </main>
     <footer>
