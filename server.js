@@ -20,8 +20,7 @@ app.set('view engine', 'ejs');
 app.get('/', getHome);
 app.get('/hello', getHello);
 app.get('/searches/new', getSearch);
-app.get('/search', getBooks);
-
+app.post('/search', getBooks);
 
 
 function getHome(req, res){
@@ -37,9 +36,9 @@ function getSearch(req, res){
 }
 
 function getBooks(req, res){
-  let searchString = req.query.query;
-  let searchType = req.query.searchtype;
+  let searchString = req.body.query;
 
+  console.log(req.body);
   let url=`https://www.googleapis.com/books/v1/volumes?q=${searchString}`;
   superagent.get(url).then(returnData => {
     const bookData = (returnData.body.items);
@@ -62,6 +61,7 @@ function BookData(book){
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
 }
+
 
 // error handling and start server
 app.use('*', (request, response) => {
