@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/modules.css">
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        X
+      </nav>
+      <h1>Hello World</h1>
+    </header>
     <section>
-          <div>
-            <img src="<%= book.image_url %>" alt="" class="book-image">
-            <h3 class="book-title">
-              <%= book.title %>
-            </h3>
-            <p class="book-author"><em>
-                <%= book.author %>
-              </em></p>
-              <a href="/">Home</a>
-          </div>
-      </section>
-</body>
+      <div id="detail-view">
+        <img src="<%= book.image_url %>" alt="" class="book-image">
+        <h3 class="book-title">
+          <%= book.title %>
+        </h3>
+        <p class="book-author"><em>
+            <%= book.author %>
+          </em></p>
+        <p>
+          <%= book.description %>
+        </p>
+        <p>
+          <%= book.isbn %>
+        </p>
+        <p>Bookshelf</p>
+      </div>
+    </section>
+    <footer>
+      <p>2020</p>
+    </footer>
+  </body>
+
+
 </html>
