@@ -19,11 +19,23 @@ nav {
 }
 
 h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 5.11%;
   width: 100%;
   position: fixed;
   top: 6.82%;
   padding-top: 12px;
+}
+
+.library-count {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  padding-top:3px;
+  padding-right: 1px;
 }
 
 section {
@@ -146,4 +158,11 @@ fieldset {
   width: 96%;
   height: 30%;
   margin: auto;
+}
+
+.details-btn {
+  display: block;
+  margin: auto;
+  width:40%;
+  height: 10%;
 }

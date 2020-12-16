@@ -20,7 +20,9 @@
       <h1>Best Books!</h1>
     </header>
     <h2>
-      <%= booklist.length %> Saved Books
+      <span class="library-count">
+        <%= booklist.length %>
+      </span> Saved Books
     </h2>
     <section>
       <% booklist.forEach((book)=> { %>
@@ -32,7 +34,7 @@
           <p class="book-author"><em>
               <%= book.author %>
             </em></p>
-          <a href="/books/<%= book.id %>">View Details</a>
+          <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
         </div>
         <% }) %>
     </section>
