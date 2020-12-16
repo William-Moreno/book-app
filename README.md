@@ -61,8 +61,14 @@ Actual time needed to complete: 35 minutes
 Number and name of feature: lab-12 feature 1
 Estimate of time needed to complete: 1 hour 30 minutes
 Start time: 1:50 PM
-Finish time: 5:00 PM
-Actual time needed to complete: 35 minutes
+Finish time: 4:25 PM
+Actual time needed to complete: 2 Hours 35 minutes
+
+Number and name of feature: lab-12 feature 2
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time:  4:30 PM
+Finish time: 4:45 PM
+Actual time needed to complete: 2 Hours 55 minutes
 
 12/14/2020 1:15 PM: started lab-11
 12/14/2020 1:45 PM: create a basic server.js file
@@ -74,7 +80,7 @@ Actual time needed to complete: 35 minutes
 12/14/2020 4:15PM: made pull request to master and confirmed functionality on deployed site.
 12/14/2020 8:30 PM: Created book constructor and added route handler for a POST request to /searches
 12/14/2020 10:00 PM: Created CSS in public folder, used SMACCS principles, and performed CSS styling
-12/14/2020
+12/15/2020 4:25 PM: Set up database, created seed.sql, refactored / route, and rendered index.ejs file with count of total books.
 
 ## Credits and Collaborations
 Brai Frauen
