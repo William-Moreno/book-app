@@ -23,7 +23,7 @@ app.get('/hello', getHello);
 app.get('/searches/new', getSearch);
 app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
-app.post('/books', saveBookData);
+app.post('/book', saveBookData);
 
 
 function getHome(req, res){
@@ -84,11 +84,21 @@ function saveBookData(req, res){
 
 function BookData(book){
   this.title = book.volumeInfo.title;
-  this.author = book.volumeInfo.authors || 'Unlisted';
+  this.author = book.volumeInfo.authors && book.volumeInfo.authors[0] || 'Unlisted';
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
-  this.isbn = book.volumeInfo.industryIdentifiers;
-  this.categories = book.volumeInfo.categories;
+  // following code modified from code review by Nicholas Carignan
+  this.isbn = 'N/A';
+  const ident = book.volumeInfo.industryIdentifiers;
+  if(ident) {
+    for (let i = 0 ; i < ident.length : i++) {
+      this.isbn = ident[i].type + ident[i].identifier;
+      if (ident[i].type === 'ISBN_13') {
+        break;
+      }
+    }
+  }
+  this.categories = book.volumeInfo.categories && book.volumeInfo.categories[0];
 }
 
 

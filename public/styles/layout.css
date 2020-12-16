@@ -133,6 +133,7 @@ fieldset {
 
 #detail-view {
   width: 450px;
+  height: 85%;
   margin: auto;
   padding: 12px;
   text-align: center;

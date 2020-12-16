@@ -30,10 +30,7 @@
             <p class="book-author"><em>
                 <%= book.author %>
               </em></p>
-            <!-- <p class="description">
-              <%= book.description %>
-            </p> -->
-            <form class="add-book" action="/books" method="POST">
+            <form class="add-book" action="/book" method="POST">
               <fieldset class="book-add">
                 <input type="text" class="form-hide" value="<%= book.title %>" name="title">
                 <input type="text" class="form-hide" value="<%= book.author %>" name="author">

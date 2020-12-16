@@ -1,3 +1,3 @@
 INSERT INTO book (author, title, isbn, image_url, description, categories) VALUES ('J.K. Rowling','Harry Potter','xxxxxxxxxxxxxx','https://i.imgur.com/J5LVHEL.jpg', 'A very interesting read.', 'Fantasy');
 
-INSERT INTO book (author, title, isbn, image_url, description, categories) VALUES ('J.K. Rowling','Harry Potter 2','xxxxxxxxxxxxxx','https://i.imgur.com/J5LVHEL.jpg', 'A very interesting read.', 'Fantasy');
+INSERT INTO book (author, title, isbn, image_url, description, categories) VALUES ('Orson Scott Card','Enders Game','1234567890','https://i.imgur.com/J5LVHEL.jpg', 'It is an awesome book, neh?', 'Sci-Fi');
