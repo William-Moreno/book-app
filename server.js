@@ -21,11 +21,13 @@ app.set('view engine', 'ejs');
 app.get('/', getHome);
 app.get('/hello', getHello);
 app.get('/searches/new', getSearch);
+app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
 
 
 function getHome(req, res){
-  client.query('SELECT * FROM book')
+  let sql='SELECT * FROM book'
+  client.query(sql)
     .then(result => {
       const books = result.rows;
       res.render('pages/index.ejs', {booklist: books});
@@ -62,6 +64,16 @@ function getBooks(req, res){
       booklist: bookArray
     });
   }).catch(() => throwError);
+}
+
+function getDetails(req, res){
+  client.query('SELECT * FROM book WHERE id=$1', [req.params.id])
+    .then(result => {
+      const bookdetail = result.rows[0];
+      const index = req.params.id;
+      console.log(bookdetail, index);
+      res.render('pages/books/detail.ejs', {book: bookdetail});
+    });
 }
 
 function BookData(book){
