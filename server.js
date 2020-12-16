@@ -23,6 +23,7 @@ app.get('/hello', getHello);
 app.get('/searches/new', getSearch);
 app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
+app.post('/books', saveBookData);
 
 
 function getHome(req, res){
@@ -50,7 +51,7 @@ function throwError(req, res){
 function getBooks(req, res){
   let searchString = req.body.query;
   let searchType = req.body.searchtype;
-  let url=`https://www.googleapis.com/books/v1/volumes?q=+in${searchType}:${searchString}`;
+  let url=`https://www.googleapis.com/books/v1/volumes?q=${searchString}+in${searchType}:${searchString}`;
   superagent.get(url).then(returnData => {
     const bookData = (returnData.body.items);
     const bookArray = bookData.map(function(book){
@@ -72,6 +73,13 @@ function getDetails(req, res){
       const bookdetail = result.rows[0];
       res.render('pages/books/detail.ejs', {book: bookdetail});
     });
+}
+
+function saveBookData(req, res){
+  const chosenBook = (req.body);
+  client.query('INSERT INTO book (author, title, image_url, description) VALUES($1, $2, $3, $4)', [chosenBook.author, chosenBook.title, chosenBook.image_url, chosenBook.description]).then(() => {
+    res.render('pages/books/detail.ejs', {book: chosenBook});
+  });
 }
 
 function BookData(book){

@@ -112,3 +112,10 @@ fieldset {
   height: 15%;
   width: 90%;
 }
+
+.add-book {
+  width:90%;
+  height:136px;
+  text-align: center;
+
+}
