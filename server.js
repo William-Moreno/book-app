@@ -91,7 +91,7 @@ function BookData(book){
   this.isbn = 'N/A';
   const ident = book.volumeInfo.industryIdentifiers;
   if(ident) {
-    for (let i = 0 ; i < ident.length : i++) {
+    for (let i = 0 ; i < ident.length ; i++) {
       this.isbn = ident[i].type + ident[i].identifier;
       if (ident[i].type === 'ISBN_13') {
         break;
