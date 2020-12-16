@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/layout.css">
-    <link rel="stylesheet" href="../styles/modules.css">
-    <title>Document</title>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-        X
-      </nav>
-      <h1>Best Books!</h1>
-    </header>
     <section>
       <div id="detail-view">
         <img src="<%= book.image_url %>" alt="" class="detail-image">
@@ -34,14 +15,10 @@
           <%= book.isbn %>
         </p>
         <p class="detail-categories">
-          <%= book.categories %>
+          Bookshelf: <%= book.categories %>
         </p>
+        <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
+
       </div>
     </section>
-    <footer>
-      <p>2020</p>
-    </footer>
-  </body>
-
-
-</html>
+   

@@ -31,7 +31,7 @@ function getHome(req, res){
   client.query(sql)
     .then(result => {
       const books = result.rows;
-      res.render('pages/index.ejs', {booklist: books});
+      res.render('pages/index.ejs', {books: books});
 
     });
 }
@@ -71,14 +71,14 @@ function getDetails(req, res){
   client.query('SELECT * FROM book WHERE id=$1', [req.params.id])
     .then(result => {
       const bookdetail = result.rows[0];
-      res.render('pages/books/detail.ejs', {book: bookdetail});
+      res.render('pages/books/show.ejs', {book: bookdetail});
     });
 }
 
 function saveBookData(req, res){
   const chosenBook = (req.body);
   client.query('INSERT INTO book (author, title, image_url, isbn, description, categories) VALUES($1, $2, $3, $4, $5, $6)', [chosenBook.author, chosenBook.title, chosenBook.image_url, chosenBook.isbn, chosenBook.description, chosenBook.categories]).then(() => {
-    res.render('pages/books/detail.ejs', {book: chosenBook});
+    res.render('pages/books/show.ejs', {book: chosenBook});
   });
 }
 
