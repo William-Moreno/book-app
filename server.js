@@ -87,7 +87,7 @@ function BookData(book){
   this.author = book.volumeInfo.authors || 'Unlisted';
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
-  this.isbn = book.volumeInfo.industryIdentifiers[0];
+  this.isbn = book.volumeInfo.industryIdentifiers;
   this.categories = book.volumeInfo.categories;
 }
 
