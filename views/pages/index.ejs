@@ -13,34 +13,18 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/searches/new">Search</a>
-      </nav>
-      <h1>Best Books!</h1>
-    </header>
+    <%- include('layout/header')%>
+
     <h2>
       <span class="library-count">
-        <%= booklist.length %>
+        <%= books.length %>
       </span> Saved Books
     </h2>
-    <section>
-      <% booklist.forEach((book)=> { %>
-        <div>
-          <img src="<%= book.image_url %>" alt="" class="book-image">
-          <h3 class="book-title">
-            <%= book.title %>
-          </h3>
-          <p class="book-author"><em>
-              <%= book.author %>
-            </em></p>
-          <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
-        </div>
-        <% }) %>
-    </section>
-    <footer>
-      <p>2020</p>
-    </footer>
+    <% books.forEach((book)=> { %>
+      <%- include('books/detail', {book: book})%>
+
+      <% }) %>
+    <%- include('layout/footer')%>
   </body>
 
 </html>
