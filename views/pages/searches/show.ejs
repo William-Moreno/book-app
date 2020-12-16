@@ -30,19 +30,20 @@
             <p class="book-author"><em>
                 <%= book.author %>
               </em></p>
-            <p class="description">
+            <!-- <p class="description">
               <%= book.description %>
-            </p>
-            <!-- <form action="/book" method="POST">
-              <fieldset>
-                <input type="text" class="form-hide" value="<%= book.title %>" name="book-name">
-                <input type="text" class="form-hide" value="<%= book.author %>" name="book-author">
-                <input type="text" class="form-hide" value="<%= book.description %>" name="book-description">
-                <input type="text" class="form-hide" value="<%= book.image_url %>" name="book-url">
-                <input type="text" class="form-hide" value="<%= book.isbn %>" name="book-isbn">
-                <input type="submit" value="Select this Book">
+            </p> -->
+            <form class="add-book" action="/books" method="POST">
+              <fieldset class="book-add">
+                <input type="text" class="form-hide" value="<%= book.title %>" name="title">
+                <input type="text" class="form-hide" value="<%= book.author %>" name="author">
+                <input type="text" class="form-hide" value="<%= book.description %>" name="description">
+                <input type="text" class="form-hide" value="<%= book.image_url %>" name="image_url">
+                <input type="text" class="form-hide" value="<%= book.isbn %>" name="isbn">
+                <input type="text" class="form-hide" value="<%= book.categories %>" name="categories">
+                <input class="select-btn" type="submit" value="Select this Book">
               </fieldset>
-            </form> -->
+            </form>
           </div>
           <% }) %>
       </section>

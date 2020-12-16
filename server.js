@@ -23,6 +23,7 @@ app.get('/hello', getHello);
 app.get('/searches/new', getSearch);
 app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
+app.post('/books', saveBookData);
 
 
 function getHome(req, res){
@@ -50,7 +51,7 @@ function throwError(req, res){
 function getBooks(req, res){
   let searchString = req.body.query;
   let searchType = req.body.searchtype;
-  let url=`https://www.googleapis.com/books/v1/volumes?q=+in${searchType}:${searchString}`;
+  let url=`https://www.googleapis.com/books/v1/volumes?q=${searchString}+in${searchType}:${searchString}`;
   superagent.get(url).then(returnData => {
     const bookData = (returnData.body.items);
     const bookArray = bookData.map(function(book){
@@ -74,12 +75,20 @@ function getDetails(req, res){
     });
 }
 
+function saveBookData(req, res){
+  const chosenBook = (req.body);
+  client.query('INSERT INTO book (author, title, image_url, isbn, description, categories) VALUES($1, $2, $3, $4, $5, $6)', [chosenBook.author, chosenBook.title, chosenBook.image_url, chosenBook.isbn, chosenBook.description, chosenBook.categories]).then(() => {
+    res.render('pages/books/detail.ejs', {book: chosenBook});
+  });
+}
+
 function BookData(book){
   this.title = book.volumeInfo.title;
   this.author = book.volumeInfo.authors || 'Unlisted';
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
-  // this.isbn = book.voulmeInfo.industryIdentifiers;
+  this.isbn = book.volumeInfo.industryIdentifiers[0];
+  this.categories = book.volumeInfo.categories;
 }
 
 

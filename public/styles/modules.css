@@ -57,3 +57,23 @@ div {
 .form-hide{
   display: none;
 }
+
+.select-btn {
+  margin: auto;
+  width:50%;
+  height: 80px;
+  background-color: black;
+  color: white;
+
+}
+
+.book-add {
+  padding-top: 12px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
