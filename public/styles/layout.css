@@ -121,9 +121,29 @@ fieldset {
 
 #detail-view {
   width: 450px;
-  height: 660px;
   margin: auto;
   padding: 12px;
   text-align: center;
+}
 
+.detail-image {
+  height: 45%;
+  object-fit: contain;
+}
+
+.detail-title {
+  width: 95%;
+  height: 8%;
+}
+
+.detail-author, 
+.detail-isbn, .detail-categories {
+  width: 90%;
+  height: 5%;
+}
+
+.detail-description {
+  width: 96%;
+  height: 30%;
+  margin: auto;
 }
