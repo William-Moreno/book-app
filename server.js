@@ -26,7 +26,7 @@ app.post('/search', getBooks);
 
 
 function getHome(req, res){
-  let sql='SELECT * FROM book'
+  let sql='SELECT * FROM book';
   client.query(sql)
     .then(result => {
       const books = result.rows;
@@ -70,8 +70,6 @@ function getDetails(req, res){
   client.query('SELECT * FROM book WHERE id=$1', [req.params.id])
     .then(result => {
       const bookdetail = result.rows[0];
-      const index = req.params.id;
-      console.log(bookdetail, index);
       res.render('pages/books/detail.ejs', {book: bookdetail});
     });
 }
@@ -81,7 +79,7 @@ function BookData(book){
   this.author = book.volumeInfo.authors || 'Unlisted';
   this.description = book.volumeInfo.description || 'Not Available';
   this.image_url = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail || `https://i.imgur.com/J5LVHEL.jpg`;
-  this.isbn = book.voulmeInfo.industryIdentifiers[0];
+  // this.isbn = book.voulmeInfo.industryIdentifiers;
 }
 
 
