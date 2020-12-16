@@ -117,5 +117,13 @@ fieldset {
   width:90%;
   height:136px;
   text-align: center;
+}
+
+#detail-view {
+  width: 450px;
+  height: 660px;
+  margin: auto;
+  padding: 12px;
+  text-align: center;
 
 }
