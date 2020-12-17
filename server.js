@@ -99,7 +99,7 @@ function getDetails(req, res, form){
 function saveBookData(req, res){
   const chosenBook = (req.body);
   client.query('INSERT INTO book (author, title, image_url, isbn, description, categories) VALUES($1, $2, $3, $4, $5, $6)', [chosenBook.author, chosenBook.title, chosenBook.image_url, chosenBook.isbn, chosenBook.description, chosenBook.categories]).then(() => {
-    res.render('pages/books/show.ejs', {book: chosenBook});
+    res.redirect('pages/books/show.ejs', {book: chosenBook});
   });
 }
 
