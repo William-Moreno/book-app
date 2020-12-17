@@ -1,9 +1,7 @@
-<form class="update-book" action="/books/<%=book.id%>?_method=PUT" method="POST" id="update-form">
   <input type="text" class="" value="<%= book.title %>" name="title"><br>
   <input type="text" class="" value="<%= book.author %>" name="author"><br>
   <input type="text" class="" value="<%= book.description %>" name="description"><br>
   <input type="text" class="" value="<%= book.image_url %>" name="image_url"><br>
   <input type="text" class="" value="<%= book.isbn %>" name="isbn"><br>
   <input type="text" class="" value="<%= book.categories %>" name="categories"><br>
-  <input class="select-btn" type="submit" value="Update Book">
-</form>
+  <input class="select-btn" type="submit" value="Update/Save Book">

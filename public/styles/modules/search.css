@@ -119,3 +119,10 @@ div {
 
 }
 
+input{
+  display: none;
+}
+
+.select-btn{
+  display: block;
+}
