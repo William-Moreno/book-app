@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/layout.css">
-    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/modules/search.css">
     <title>Search Results</title>
   </head>
 
@@ -21,15 +21,7 @@
             <div>
               <%- include('../books/detail', {book: book}) %>
                 <form class="add-book" action="/book" method="POST">
-                  <fieldset class="book-add">
-                    <input type="text" class="form-hide" value="<%= book.title %>" name="title">
-                    <input type="text" class="form-hide" value="<%= book.author %>" name="author">
-                    <input type="text" class="form-hide" value="<%= book.description %>" name="description">
-                    <input type="text" class="form-hide" value="<%= book.image_url %>" name="image_url">
-                    <input type="text" class="form-hide" value="<%= book.isbn %>" name="isbn">
-                    <input type="text" class="form-hide" value="<%= book.categories %>" name="categories">
-                    <input class="select-btn" type="submit" value="Select this Book">
-                  </fieldset>
+               <%- include('../books/edit', {book: book}) %>
                 </form>
             </div>
             <% }) %>

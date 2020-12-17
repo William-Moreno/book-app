@@ -150,3 +150,7 @@ form input {
   padding: .3rem;
   float: right;
 }
+
+#select-book{
+  z-index: 5;
+}
