@@ -6,12 +6,14 @@ const superagent = require('superagent');
 require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
+const methodOverride = require('method-override');
+let showForm = false;
 
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', error => console.error(error));
 
 
-
+app.use(methodOverride('_method'));
 app.use(express.static('./public'));
 app.use(express.urlencoded({extended: true}));
 
@@ -24,7 +26,27 @@ app.get('/searches/new', getSearch);
 app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
 app.post('/book', saveBookData);
+app.put('/books/:id', updateBook);
+app.get('/test/:id', testFunc);
 
+function testFunc(req, res){
+  console.log(req.params.id);
+  let form = 1;
+  res.render('/pages/books/' + req.params.id, {show: form});
+}
+
+function updateBook(req, res){
+  const sql = `
+  UPDATE book
+  SET title=$2, author=$3, isbn=$4, description=$5, image_url=$6, categories=$7
+  WHERE id=$1
+  `;
+  const sqlArray = [req.params.id, req.body.title, req.body.author, req.body.isbn, req.body.description, req.body.image_url, req.body.categories];
+  client.query(sql, sqlArray)
+    .then(() => {
+      res.redirect('/books/' + req.params.id);
+    });
+}
 
 function getHome(req, res){
   let sql='SELECT * FROM book';
@@ -67,11 +89,11 @@ function getBooks(req, res){
   }).catch(() => throwError);
 }
 
-function getDetails(req, res){
+function getDetails(req, res, form){
   client.query('SELECT * FROM book WHERE id=$1', [req.params.id])
     .then(result => {
       const bookdetail = result.rows[0];
-      res.render('pages/books/show.ejs', {book: bookdetail});
+      res.render('pages/books/show.ejs', {book: bookdetail, show: false});
     });
 }
 

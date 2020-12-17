@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <%- include('layout/header')%>
+    <%- include('../layout/header')%>
 
     <h2>
       <span class="library-count">
@@ -21,10 +21,14 @@
       </span> Saved Books
     </h2>
     <% books.forEach((book)=> { %>
-      <%- include('books/detail', {book: book})%>
-
-      <% }) %>
-    <%- include('layout/footer')%>
+      <section>
+        <div>
+          <%- include('books/detail', {book: book})%>
+          <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
+          <% }) %>
+        </div>
+      </section>
+    <%- include('../layout/footer')%>
   </body>
 
 </html>

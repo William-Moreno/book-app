@@ -5,7 +5,7 @@
 
 **Author**: Nick Abramowicz, William Moreno, Wondwosen Tsige
 
-**Version**: 0.0.2
+**Version**: 0.0.3
 
 ## Overview
 
@@ -70,6 +70,30 @@ Start time:  4:30 PM
 Finish time: 4:45 PM
 Actual time needed to complete: 2 Hours 55 minutes
 
+Number and name of feature: lab-12 feature 3
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time: 5:00 PM
+Finish time: 6:45 PM
+Actual time needed to complete: 1 Hours 45 minutes
+
+Number and name of feature: lab-12 feature 4
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time:  7:00 PM
+Finish time: 8:35 PM
+Actual time needed to complete: 1 Hours 35 minutes
+
+Number and name of feature: lab-12 feature 5
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time: 8:50 PM
+Finish time: 10:50 PM
+Actual time needed to complete: 2 Hours
+
+Number and name of feature: lab-13 feature 1
+Estimate of time needed to complete: 1 hour 30 minutes
+Start time:  3:30 PM
+Finish time: 4:45 PM
+Actual time needed to complete: 2 Hours 55 minutes
+
 12/14/2020 1:15 PM: started lab-11
 12/14/2020 1:45 PM: create a basic server.js file
 12/14/2020 2:15 PM: created views folder with inex.ejs file
@@ -81,8 +105,16 @@ Actual time needed to complete: 2 Hours 55 minutes
 12/14/2020 8:30 PM: Created book constructor and added route handler for a POST request to /searches
 12/14/2020 10:00 PM: Created CSS in public folder, used SMACCS principles, and performed CSS styling
 12/15/2020 4:25 PM: Set up database, created seed.sql, refactored / route, and rendered index.ejs file with count of total books.
+12/15/2020 4:45 PM: Created new view to display details of books.
+12/15/2020 6:46 PM: Created form with a dubmit button that adds books to their collection.
+12/15/2020 8:35 PM: Moved SQL queries and view renderings into callbacks.
+12/15/2020 10:50 PM: Added CSS styling.
 
 ## Credits and Collaborations
 Brai Frauen
+Nicholas Ryan
+Chance Harmon
+Dario Thornhill
+Kristian ?
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 -->
