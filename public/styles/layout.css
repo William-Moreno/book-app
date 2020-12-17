@@ -27,7 +27,7 @@ h2 {
   width: 100%;
   position: fixed;
   top: 6.82%;
-  padding-top: 12px;
+
 }
 
 .library-count {
@@ -47,17 +47,20 @@ section {
 }
 
 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 420px;
   height: 540px;
   margin: 15px auto;
-  padding: 24px;
+  padding: 18px;
   text-align: center;
 
 }
 
 .book-image {
-  width: 232px;
-  height: 292px;
+  height: 60%;
   object-fit: contain;
 }
 
@@ -88,7 +91,10 @@ footer {
   position: fixed;
   top: 96.02%;
   height: 3.98%;
-  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 form {
@@ -140,7 +146,7 @@ fieldset {
 }
 
 .detail-image {
-  height: 45%;
+  height: 60%;
   object-fit: contain;
 }
 

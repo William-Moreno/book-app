@@ -1,0 +1,132 @@
+body {
+    background-color:#5b5a5f;
+}
+
+header {
+    background-color:black;
+    color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+
+.library-count {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+h2 {
+    background-color:#363638;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color:black;
+    color: rgb(105, 102, 102);
+    text-align: center;
+}
+
+div {
+  background-color: rgb(193, 195, 196);
+  border-radius: 6px;
+  box-shadow:2px 2px 4px black;
+
+}
+
+.entry {
+  font-size: 18px;
+  padding-left: 12px;
+  text-align: left;
+  border-radius: 8px;
+
+}
+
+.selector {
+  background-color: rgb(168, 169, 170);
+  font-size: 18px;
+  padding: 24px 12px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.sub-btn {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.form-hide{
+  display: none;
+}
+
+.select-btn {
+  margin: auto;
+  width:50%;
+  height: 80px;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+
+}
+
+.book-add {
+  padding-top: 12px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.detail-title {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.detail-author {
+  margin-top: 16px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.detail-description {
+  display: none;
+  background-color:rgb(235, 236, 236);
+  border-radius: 8px;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: 9px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.detail-isbn {
+  display: none;
+}
+
+.display-categories {
+  display: none;
+}
+
+.details-btn {
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 46px;
+
+
+}
+

@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const methodOverride = require('method-override');
-let showForm = false;
+
 
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', error => console.error(error));
@@ -27,13 +27,7 @@ app.get('/books/:id', getDetails);
 app.post('/search', getBooks);
 app.post('/book', saveBookData);
 app.put('/books/:id', updateBook);
-app.get('/test/:id', testFunc);
-
-function testFunc(req, res){
-  console.log(req.params.id);
-  let form = 1;
-  res.render('/pages/books/' + req.params.id, {show: form});
-}
+app.delete('/books/:id', deleteBook);
 
 function updateBook(req, res){
   const sql = `
@@ -46,6 +40,11 @@ function updateBook(req, res){
     .then(() => {
       res.redirect('/books/' + req.params.id);
     });
+}
+
+function deleteBook(req, res){
+  client.query('DELETE FROM book WHERE id=$1', [req.params.id])
+    .then(() => res.redirect('/'));
 }
 
 function getHome(req, res){
@@ -93,7 +92,7 @@ function getDetails(req, res, form){
   client.query('SELECT * FROM book WHERE id=$1', [req.params.id])
     .then(result => {
       const bookdetail = result.rows[0];
-      res.render('pages/books/show.ejs', {book: bookdetail, show: false});
+      res.render('pages/books/show.ejs', {book: bookdetail});
     });
 }
 

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/layout.css">
-    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/modules/index.css">
+    <script src="https://kit.fontawesome.com/4fc1b5d5ea.js" crossorigin="anonymous"></script>
 
     <title>Book App</title>
   </head>
@@ -15,20 +16,20 @@
   <body>
     <%- include('../layout/header')%>
 
-    <h2>
-      <span class="library-count">
-        <%= books.length %>
-      </span> Saved Books
-    </h2>
-    <% books.forEach((book)=> { %>
+      <h2>
+        <span class="library-count">
+          <%= books.length %>
+        </span> Saved Books
+      </h2>
       <section>
-        <div>
-          <%- include('books/detail', {book: book})%>
-          <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
+        <% books.forEach((book)=> { %>
+          <div>
+            <%- include('books/detail', {book: book})%>
+              <a class="details-btn" href="/books/<%= book.id %>">View Details</a>
+          </div>
           <% }) %>
-        </div>
       </section>
-    <%- include('../layout/footer')%>
+      <%- include('../layout/footer')%>
   </body>
 
 </html>
