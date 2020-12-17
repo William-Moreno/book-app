@@ -14,7 +14,7 @@
 
   <body>
     <%- include('../../layout/header')%>
-      <section>
+      <section id="detail-view">
         <div id="book-display">
           <%- include('detail', {book: book}) %>
             <div id="btn-box">
@@ -23,8 +23,8 @@
                 <button id="delete-book" type="submit">Delete Book</button>
               </form>
             </div>
-            <%- include('edit', {book: book}) %>
         </div>
+        <%- include('edit', {book: book}) %>
       </section>
       <%- include('../../layout/footer')%>
         <script src="/app.js"></script>
