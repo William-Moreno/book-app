@@ -13,15 +13,18 @@
 
   <body>
     <%- include('../../layout/header')%>
-    <section>
-      <div>
-        <%- include('detail', {book: book}) %>
-        <button id="show-form">Update Details</button>
-        <%- include('edit', {book: book}) %>
-      </div>
-    </section>
-    <%- include('../../layout/footer')%>
-    <script src="/app.js"></script>
+      <section>
+        <div>
+          <%- include('detail', {book: book}) %>
+            <button id="show-form">Update Details</button>
+            <form action="/books/<%= book.id %>?_method=DELETE" method="POST">
+              <button id="delete-book" type="submit">Delete Book</button>
+            </form>
+            <%- include('edit', {book: book}) %>
+        </div>
+      </section>
+      <%- include('../../layout/footer')%>
+        <script src="/app.js"></script>
   </body>
 
 </html>
