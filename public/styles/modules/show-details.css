@@ -28,7 +28,7 @@ h2 {
 
 footer {
     background-color:black;
-    color: white;
+    color: rgb(105, 102, 102);
     text-align: center;
 }
 
@@ -94,7 +94,7 @@ div {
 }
 
 .detail-author {
-  font-size: 16px;
+  font-size: 12px;
   font-style: italic;
 }
 
@@ -103,7 +103,7 @@ div {
   border-radius: 8px;
   padding: 3px;
   font-family: Arial, Helvetica, sans-serif;
-  font-style: 9px;
+  font-style: 8px;
   overflow: hidden;
   text-align: center;
 }
@@ -115,7 +115,37 @@ div {
   text-decoration: none;
   font-size: 20px;
   line-height: 46px;
-
-
 }
 
+button, .select-btn {
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  padding: .5rem;
+}
+
+#update-form {
+  width: 420px;
+  height: 80vh;
+  z-index: 2;
+  transform: translateY(-90%);
+  background-color: rgb(168, 169, 170);
+  padding: 20px;
+}
+
+form input {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 1.5rem;
+}
+
+.select-btn {
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  padding: .3rem;
+  float: right;
+}
