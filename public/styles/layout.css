@@ -5,6 +5,10 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   height: 6.82%;
   width: 100%;
   position: fixed;
@@ -12,6 +16,7 @@ header {
   padding-top: 20px;
   padding-left: 12px;
 }
+
 
 main {
   width: 100vw;
@@ -21,9 +26,6 @@ main {
   align-items: center;
 }
 
-nav {
-  float: right;
-}
 
 h2 {
   display: flex;
