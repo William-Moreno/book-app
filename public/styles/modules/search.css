@@ -1,13 +1,29 @@
 body {
-  background-color:#5b5a5f;
+    background-color:#5b5a5f;
 }
 
 header {
-  background-color:black;
+    font-size: 26px;
+    background-color:black;
+}
+
+h1 {
+      color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
   color: white;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  border: 2px solid rgb(193, 195, 196);
+  border-radius: 8px;
+  padding: .7vh;
+  background-color: #343435;
+  text-shadow:2px 2px 3px black;
+
 }
 
 
