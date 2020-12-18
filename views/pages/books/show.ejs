@@ -23,10 +23,10 @@
                 <button id="delete-book" type="submit">Delete Book</button>
               </form>
             </div>
+            <form class="update-book" action="/books/<%=book.id%>?_method=PUT" method="POST" id="update-form">
+              <%- include('edit', {book: book}) %>
+            </form>
         </div>
-        <form class="update-book" action="/books/<%=book.id%>?_method=PUT" method="POST" id="update-form">
-        <%- include('edit', {book: book}) %>
-      </form>
       </section>
       <%- include('../../layout/footer')%>
         <script src="/app.js"></script>

@@ -13,6 +13,14 @@ header {
   padding-left: 12px;
 }
 
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 nav {
   float: right;
 }
@@ -39,16 +47,16 @@ h2 {
 
 section {
   margin-top: 11.93vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-#detail-view {
+/* #detail-view {
   justify-content: center;
-}
+} */
 
 div {
   display: flex;
@@ -63,6 +71,7 @@ div {
 }
 
 #book-display {
+  margin: auto;
   transform: translateY(10%);
   height: 80vh;
 }
@@ -117,12 +126,13 @@ footer {
 }
 
 form {
-
+  margin: auto;
   text-align: center;
   height: 40vh;
 }
 
 fieldset {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -62,10 +62,6 @@ div {
   border-radius: 8px;
 }
 
-.form-hide{
-  display: none;
-}
-
 .select-btn {
   margin: auto;
   width:50%;
@@ -149,8 +145,4 @@ form input {
   border-radius: .4rem;
   padding: .3rem;
   float: right;
-}
-
-#select-book{
-  z-index: 5;
 }
